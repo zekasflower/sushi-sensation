@@ -1,0 +1,72 @@
+/* Vue Transitions */
+
+/* Fade Properties */
+.fade-fast-enter-active,
+.fade-fast-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-slow-enter-active,
+.fade-slow-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-fast-enter-from,
+.fade-fast-leave-to,
+.fade-enter-from,
+.fade-leave-to,
+.fade-slow-enter-from,
+.fade-slow-leave-to {
+  opacity: 0;
+}
+/* End Fade */
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Scale */
+.menu-scale-enter-active {
+  @apply transition-all duration-200 ease-out
+}
+
+.menu-scale-leave-active {
+  @apply transition-all duration-200 ease-in
+}
+
+.menu-scale-enter-from, .menu-scale-leave-to {
+  @apply transform origin-top-right scale-90 opacity-0
+}
+
+.menu-scale-enter-to, .menu-scale-leave-from {
+  @apply transform origin-top-right scale-100 opacity-100
+}
+
+/* Translate */
+.translate-enter-active {
+  @apply transition duration-300 ease-out
+}
+
+.translate-leave-active {
+  @apply transition duration-200 ease-in
+}
+
+.translate-enter-to, .translate-leave-from {
+  @apply transform translate-y-0 opacity-100
+}
+
+.translate-enter-from, .translate-leave-to {
+  @apply transform translate-y-1 opacity-0
+}

@@ -1,0 +1,17 @@
+/* Fonts */
+/* Satoshi */
+@import './fonts/satoshi/css/satoshi';
+/* Forum */
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+* {
+  @apply scrollbar-hide
+}
+
+html {
+  @apply selection:bg-primary/15 selection:text-muted scroll-smooth
+}
+
+body {
+  @apply font-satoshi bg-dark text-primary text-base p-6
+}

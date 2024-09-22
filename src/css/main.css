@@ -1,0 +1,11 @@
+/* Vue transitions used */
+@import '_vue-transitions.css';
+
+/* Importing tailwindcss */
+@import '_tailwind.css';
+
+/* Some global resets for html elements */
+@import '_resets.css';
+
+/* Some globla styles */
+@import '_global.css';

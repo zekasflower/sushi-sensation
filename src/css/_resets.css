@@ -1,0 +1,41 @@
+/* Resets */
+button, a, input, textarea {
+  @apply outline-none
+}
+
+strong, b {
+  @apply font-bold
+}
+
+textarea { 
+  @apply resize-none
+}
+
+/* input, textarea {
+  @apply caret-tint-1
+} */
+
+input:disabled, textarea:disabled {
+  @apply bg-transparent
+}
+
+/* Search input X icon */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* Time input clock icon */
+input[type="time"]::-webkit-calendar-picker-indicator { display: none }
+
+/* Number input arrows/spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
