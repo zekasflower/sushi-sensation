@@ -14,7 +14,7 @@ import { RESTAURANT_MENU_FILTERS, RESTAURANT_MENU } from '@/constants'
       />
       
       <div class="flex items-end justify-between pt-20 bg-gradient-to-t from-black/60 to-transparent">
-        <h1 class="pl-20 pb-14 font-forum text-heading-xlarge uppercase w-[800px]">
+        <h1 class="pl-20 pb-14 font-forum text-heading-large uppercase w-[800px]">
           Menu
         </h1>
       </div>

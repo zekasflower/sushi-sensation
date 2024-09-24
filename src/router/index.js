@@ -27,7 +27,7 @@ const routes = [
   {
     path: '/reservation', 
     name: 'Reservation',
-    component: () => import('./RouterView.vue'),
+    component: () => import('@/views/Reservationpage.vue')
   },
   {
     path: '/about', 
