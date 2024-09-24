@@ -38,7 +38,7 @@ export default {
         medium: [ '18px',{ lineHeight: '150%',} ],
         base: [ '16px',{ lineHeight: '180%',} ],
         small: [ '14px',{ lineHeight: '150%',} ],
-        meta: [ '12px',{ lineHeight: '130%', letterSpacing: '1px', } ],
+        meta: [ '12px',{ lineHeight: '130%', letterSpacing: '1px', fontWeight: '400' } ],
       },
       zIndex: {
         '-1': '-1',

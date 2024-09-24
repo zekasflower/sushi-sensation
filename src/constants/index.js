@@ -35,7 +35,7 @@ export const SOCIALS = [
   }
 ]
 
-export const RESTAURANT_MENU_TABS = [
+export const RESTAURANT_MENU_FILTERS = [
   {
     key: 'maki_tab_key',
     name: 'Maki',
@@ -60,7 +60,7 @@ export const RESTAURANT_MENU = [
   {
     key: 'maki_key',
     category: 'Maki',
-    items: [
+    meals: [
       {
         key: 'spicy_tuna_maki_key',
         image: spicy_tuna_maki_image,
@@ -95,7 +95,7 @@ export const RESTAURANT_MENU = [
   {
     key: 'uramaki_key',
     category: 'UraMaki',
-    items: [
+    meals: [
       {
         key: 'volcano_delight_key',
         image: volcano_delight_image,
@@ -151,7 +151,7 @@ export const RESTAURANT_MENU = [
   {
     key: 'special_rolls_key',
     category: 'Special Rolls',
-    items: [
+    meals: [
       {
         key: 'sunrise_bliss_key',
         image: sunrise_bliss_image,

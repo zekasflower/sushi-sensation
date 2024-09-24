@@ -13,5 +13,5 @@ html {
 }
 
 body {
-  @apply font-satoshi bg-dark text-primary text-base p-6
+  @apply font-satoshi font-light bg-dark text-primary text-base p-6
 }
