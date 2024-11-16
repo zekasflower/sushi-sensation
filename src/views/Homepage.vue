@@ -28,7 +28,7 @@ const routesList = [
 </script>
 
 <template>
-  <section class="homepage flex flex-col xl:flex-row gap-4 xl:h-[calc(100vh-48px)] overflow-hidden">
+  <section class="homepage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)] overflow-hidden">
     <section class="flex-1 rounded-xl md:rounded-2xl overflow-hidden relative flex flex-col justify-end">
       <video
         src="@/assets/videos/homepage.mp4" loop muted autoplay 

@@ -44,6 +44,9 @@ export default {
         '-1': '-1',
         100: '100'
       },
+      screens: {
+        '2xl': '1440px'
+      },
     },
   },
   plugins: [
