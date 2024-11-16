@@ -1,6 +1,6 @@
 <template>
-  <footer class="px-8 py-5 rounded-2xl border border-primary/15">
-    <div class="flex items-center justify-center gap-x-4">
+  <footer class="px-5 py-3 md:px-8 md:py-5 text-small rounded-2xl border border-primary/15">
+    <div class="flex items-center justify-center gap-x-3 md:gap-x-4">
       <span>By Pawel Gola</span>
 
       <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">

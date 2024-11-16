@@ -28,67 +28,92 @@ const routesList = [
 </script>
 
 <template>
-  <section class="homepage flex gap-x-4 h-[calc(100vh-48px)] overflow-hidden">
-    <section class="flex-1 rounded-2xl overflow-hidden relative flex flex-col justify-end">
-      <img
-        src="@/assets/images/homepage/main.png"
-        class="absolute inset-0 object-cover object-center h-full w-full max-w-none -z-1"
+  <section class="homepage flex flex-col xl:flex-row gap-4 xl:h-[calc(100vh-48px)] overflow-hidden">
+    <section class="flex-1 rounded-xl md:rounded-2xl overflow-hidden relative flex flex-col justify-end">
+      <video
+        src="@/assets/videos/homepage.mp4" loop muted autoplay 
+        class="aspect-square md:aspect-video object-cover object-center md:h-[600px] xl:h-full"
       />
       
-      <div class="flex items-end justify-between pt-48 bg-gradient-to-t from-black/60 to-transparent">
-        <h1 class="pl-20 pb-14 font-forum text-heading-xlarge uppercase w-[800px]">
-          Sushi Sensation
-        </h1>
-        <div class="relative">
-          <img src="@/assets/icons/rounded-edge.svg" class="absolute -top-10 right-0" />
+      <div
+        class="
+          md:flex flex-col xl:flex-row items-end xl:justify-between pt-32 md:pt-48 bg-gradient-to-t from-black/60 to-transparent
+          absolute left-0 bottom-0 w-full
+        "
+      >
 
-          <ul class="flex items-center gap-x-2 bg-dark pt-6 pl-6 pr-4 pb-4 rounded-tl-3xl">
+        <h1
+          class="
+            font-forum text-heading-h1 md:text-heading-medium xl:text-heading-large 2xl:text-heading-xlarge xl:pl-20 pb-6 md:pb-0 xl:pb-14
+            uppercase w-full xl:w-[800px] text-center xl:text-left
+          "
+        >
+          Sushi <br> Sensation
+        </h1>
+        
+        <div class="relative hidden md:block w-fit">
+          <img src="@/assets/icons/rounded-edge.svg" class="absolute -top-8 right-0 w-8" />
+
+          <ul class="flex items-center gap-x-2 bg-dark pt-4 pl-6 pr-4 pb-2 rounded-tl-3xl">
             <li v-for="social in SOCIALS" :key="social.key">
               <a
                 :href="social?.url || '#'"
                 :target="social?.url && '_blank'"
                 class="
-                  flex items-center justify-center w-9 h-9 border border-primary/15
-                  rounded-full bg-dark-2/50 transition duration-300 hover:bg-primary hover:text-dark
+                  flex items-center justify-center w-8 h-8 border border-primary/15
+                  rounded-full bg-dark-2/50 transition duration-300 hover:bg-primary/15
                 "
               >
-                <Icon :icon="social.icon" class="text-lg" />
+                <Icon :icon="social.icon" />
               </a>
             </li>
           </ul>
 
-          <img src="@/assets/icons/rounded-edge.svg" class="absolute -left-10 bottom-0" />
+          <img src="@/assets/icons/rounded-edge.svg" class="absolute -left-8 -bottom-px w-8" />
         </div>
       </div>
     </section>
 
-    <section class="flex-none w-[22%] flex flex-col">
-      <ul class="flex flex-col h-full gap-y-4">
-        <li
-          v-for="item in routesList"
-          :key="item.key"
-          class="flex flex-col items-end justify-end flex-1 h-1/3 overflow-hidden relative rounded-xl"
-        >
-          <img
-            :src="item.image"
-            class="absolute inset-0 object-cover h-full w-full max-w-none -z-1"
-            :class="item.text === 'Reservation' ? 'object-center' : 'object-[50%_80%]'"
-          />
-          <div class="relative">
-          <img src="@/assets/icons/rounded-edge.svg" class="absolute -top-10 right-0" />
+    <section class="flex-none xl:w-[23%] flex flex-col h-full">
+      <ul class="flex flex-col md:flex-row xl:flex-col h-full gap-4">
+        <template v-for="item in routesList" :key="item.key">
 
-          <router-link :to="item.route"  class="flex items-center gap-x-2 bg-dark pt-3 pl-6  rounded-tl-3xl uppercase font-forum leading-4 tracking-[1px] group">
-            <span v-text="item.text" />
-            <div class="flex items-center justify-center w-8 h-8 border border-primary/15
-                  rounded-full bg-dark-2/50 transition duration-300 group-hover:bg-primary group-hover:text-dark">
-              <Icon icon="ph:arrow-right-light" />
+          <router-link
+            :to="item.route"
+            class="flex flex-col items-end justify-end xl:h-1/3 overflow-hidden flex-1 relative hover duration-300 hover:brightness-125 group"
+          >
+
+            <img
+              :src="item.image"
+              class="aspect-square xl:aspect-auto object-cover w-full xl:h-full max-w-none rounded-xl"
+              :class="item.text === 'Reservation' ? 'object-center' : 'object-[50%_80%]'"
+            />
+
+            <div class="absolute bottom-0 right-0">
+              <img src="@/assets/icons/rounded-edge.svg" class="absolute bottom-full right-0 w-6" />
+    
+              <span class="flex items-center gap-x-2 bg-dark pt-3 pl-6  rounded-tl-3xl uppercase font-forum leading-4 tracking-[1px]">
+                <span v-text="item.text" />
+
+                <div
+                  class="
+                    flex items-center justify-center w-8 h-8 border border-primary/15
+                    rounded-full bg-dark-2/50 transition duration-300 group-hover:bg-primary/5
+                  "
+                >
+                  <Icon icon="ph:arrow-right-light" />
+                </div>
+              </span>
+    
+              <img src="@/assets/icons/rounded-edge.svg" class="absolute right-full -bottom-px w-6" />
             </div>
+
           </router-link>
 
-          <img src="@/assets/icons/rounded-edge.svg" class="absolute -left-10 bottom-0" />
-        </div>
-        </li>
+        </template>
       </ul>
     </section>
+
+    <PageFooter class="xl:hidden" />
   </section>
 </template>

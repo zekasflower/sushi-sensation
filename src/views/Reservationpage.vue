@@ -3,6 +3,11 @@ import { RESTAURANT_MENU_FILTERS, RESTAURANT_MENU } from '@/constants'
 
 // const 
 
+const clickDateInput = (e) => {
+  e.target.showPicker()
+  console.log(e.target)
+}
+
 </script>
 
 <template>
@@ -35,13 +40,16 @@ import { RESTAURANT_MENU_FILTERS, RESTAURANT_MENU } from '@/constants'
         </section>
         
         <form class="flex flex-col gap-y-4">
-          <input type="text" placeholder="Name" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
-          <input type="tel" placeholder="Phone Number" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
-          <input type="email" placeholder="Email" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
+          <input type="text" placeholder="Name" class="main-controller" />
+          <input type="tel" placeholder="Phone Number" class="main-controller" />
+          <input type="email" placeholder="Email" class="main-controller" />
           <section class="flex items-stretch gap-x-4">
-            <input type="number" placeholder="Guests" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
-            <input type="date" placeholder="Date" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
-            <input type="time" placeholder="Time" class="w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50" />
+            <input type="number" placeholder="Guests" class="main-controller" />
+
+            <input type="date" placeholder="Date" class="main-controller" @click="clickDateInput" />
+
+
+            <input type="time" placeholder="Time" class="main-controller" />
           </section>
 
           <button class="bg-primary text-dark text-meta uppercase py-4 rounded-lg" @click.prevent>
@@ -54,3 +62,9 @@ import { RESTAURANT_MENU_FILTERS, RESTAURANT_MENU } from '@/constants'
     </section>
   </section>
 </template>
+
+<style scoped>
+.main-controller {
+  @apply w-full bg-dark-2/50 py-4 px-6 rounded-[10px] border border-primary/15 text-primary transition duration-300 focus:bg-dark-2/80 focus:border-primary/50 placeholder:text-primary/50
+}
+</style>

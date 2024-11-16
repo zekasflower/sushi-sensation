@@ -45,7 +45,7 @@ import { RESTAURANT_MENU_FILTERS, RESTAURANT_MENU } from '@/constants'
                   <img :src="meal.image" />
                 </div>
                 
-                <div>
+                <div class="flex-1">
                   <header class="flex items-end justify-between gap-x-4 mb-1">
                     <div class="flex items-center gap-x-3 flex-none">
                       <h3 class="uppercase font-forum text-heading-h5" v-text="meal.name" />
