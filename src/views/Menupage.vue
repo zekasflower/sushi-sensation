@@ -54,9 +54,9 @@ const filterMenu = target => {
           />
         </ul>
 
-        <section class="flex flex-col gap-y-16 2xl:gap-y-24 mx-auto max-w-4xl 2xl:max-w-[52rem] px-8 2xl:px-0">
+        <section class="flex flex-col gap-y-16 2xl:gap-y-24 mx-auto max-w-4xl 2xl:max-w-[52rem] md:px-8 2xl:px-0">
           <section v-for="section in filteredMenu" :key="section.key">
-            
+
             <div class="flex items-center justify-center gap-x-4 mb-8 md:mb-12">
               <img src="@/assets/icons/diamond-border-left.svg" />
               <h2 v-text="section.category" class="font-forum uppercase text-heading-h4 md:text-heading-h3" />
