@@ -33,7 +33,7 @@ const filterMenu = target => {
         <h1
           class="
             2xl:pl-20 pb-6 md:pb-10 2xl:pb-14 font-forum text-heading-h1 md:text-heading-medium 2xl:text-heading-large uppercase
-            w-full 2xl:w-[800px] text-center 2xl:text-left
+            w-full text-center 2xl:text-left
           "
         >
           Menu
