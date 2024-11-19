@@ -32,7 +32,7 @@ const routes = [
   {
     path: '/about', 
     name: 'About',
-    component: () => import('./RouterView.vue'),
+    component: () => import('@/views/Aboutpage.vue'),
   },
   {
     path: '/contact', 
