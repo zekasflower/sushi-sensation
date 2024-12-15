@@ -19,10 +19,10 @@ const routesList = [
     route: 'reservation',
   },
   {
-    key: 'contact_key',
+    key: 'about_key',
     image: mini3,
     text: 'Our Restaurant',
-    route: 'contact',
+    route: 'about',
   },
 ]
 </script>
