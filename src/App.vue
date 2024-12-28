@@ -22,11 +22,9 @@ onMounted(() => {
 <template>
   <img
     src="@/assets/images/bg.png"
-    class="opacity-20 fixed top-0 left-0 -z-100 w-full h-full object-cover object-center max-w-none"
+    class="opacity-10 fixed top-0 left-0 -z-100 w-full h-full object-cover object-center max-w-none"
     v-if="route.name !== 'homepage'"
   />
-
-  <PageNavbar />
 
   <RouterView />
 </template>

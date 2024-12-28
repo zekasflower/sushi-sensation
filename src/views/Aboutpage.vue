@@ -24,7 +24,9 @@ const REVIEWS = [
 </script>
 
 <template>
-  <section class="menupage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)]">
+  <section class="menupage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)] relative">
+    <PageNavbar />
+
     <section class="flex-1 rounded-xl xl:rounded-2xl overflow-hidden relative flex flex-col justify-end">
       <img
         src="@/assets/images/aboutpage/main.png"

@@ -22,7 +22,9 @@ const filterMenu = target => {
 </script>
 
 <template>
-  <section class="menupage flex max-2xl:flex-col gap-4 2xl:h-[calc(100vh-48px)]">
+  <section class="menupage flex max-2xl:flex-col gap-4 2xl:h-[calc(100vh-48px)] relative">
+    <PageNavbar class="max-2xl:-translate-x-1/2 xl:!left-1/2 2xl:left-12" />
+
     <section class="flex-1 rounded-xl 2xl:rounded-2xl overflow-hidden relative flex flex-col justify-end">
       <img
         src="@/assets/images/menupage/main.png"

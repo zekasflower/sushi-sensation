@@ -10,25 +10,27 @@ const routesList = [
     key: 'menu_key',
     image: mini1,
     text: 'Menu',
-    route: 'menu',
+    route: '/menu',
   },
   {
     key: 'reservation_key',
     image: mini2,
     text: 'Reservation',
-    route: 'reservation',
+    route: '/reservation',
   },
   {
     key: 'about_key',
     image: mini3,
     text: 'Our Restaurant',
-    route: 'about',
+    route: '/about',
   },
 ]
 </script>
 
 <template>
-  <section class="homepage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)] overflow-hidden">
+  <section class="homepage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)] overflow-hidden relative">
+    <PageNavbar />
+
     <section class="flex-1 rounded-xl md:rounded-2xl overflow-hidden relative flex flex-col justify-end">
       <video
         src="@/assets/videos/homepage.mp4" loop muted autoplay 
@@ -74,7 +76,7 @@ const routesList = [
       </div>
     </section>
 
-    <section class="flex-none xl:w-[23%] flex flex-col h-full">
+    <section class="flex-none xl:w-[26.5%] flex flex-col h-full">
       <ul class="flex flex-col md:flex-row xl:flex-col h-full gap-4">
         <template v-for="item in routesList" :key="item.key">
 

@@ -11,7 +11,9 @@ const clickDateInput = (e) => {
 </script>
 
 <template>
-  <section class="menupage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)]">
+  <section class="menupage flex max-xl:flex-col gap-4 xl:h-[calc(100vh-48px)] relative">
+    <PageNavbar />
+
     <section class="flex-1 rounded-xl xl:rounded-2xl overflow-hidden relative flex flex-col justify-end">
       <img
         src="@/assets/images/reservationpage/main.png"
@@ -48,19 +50,20 @@ const clickDateInput = (e) => {
           <input type="text" placeholder="Name" class="main-controller" />
           <input type="tel" placeholder="Phone Number" class="main-controller" />
           <input type="email" placeholder="Email" class="main-controller" />
-          <section class="flex max-md:flex-col items-stretch gap-4">
+          <!-- XXX TODO: GUESTS DATE TIME INPUTS -->
+          <!-- <section class="flex max-md:flex-col items-stretch gap-4">
             <input type="number" placeholder="Guests" class="main-controller" min="1" max="20" />
 
             <input type="date" placeholder="Date" class="main-controller" />
-            <!-- <label for="#date-id" @click="clickDateInput">
+            <label for="#date-id" @click="clickDateInput">
               <input type="date" placeholder="Date" class="main-controller" @click="clickDateInput" />
               btngaaan
               <input type="date" placeholder="Date" class="main-controller opacity-0" id="date-id" ref="dateInput" />
-            </label> -->
+            </label>
 
 
             <input type="time" placeholder="Time" class="main-controller" />
-          </section>
+          </section> -->
 
           <button class="bg-primary text-dark text-meta uppercase py-4 rounded-lg" @click.prevent>
             Reserve
