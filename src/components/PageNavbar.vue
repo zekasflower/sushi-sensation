@@ -1,10 +1,21 @@
 <script setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router';
+import { onClickOutside, useEventListener } from '@vueuse/core'
 
 const route = useRoute()
 
 const navOpened = ref(false)
+
+const navTarget = ref(null)
+
+onClickOutside(navTarget, () => navOpened.value = false)
+useEventListener(document, 'keyup', (e) => {
+  e.preventDefault()
+  if (e.key === 'Escape') {
+    navOpened.value = false
+  }
+})
 
 const ROUTES = {
   home: {
@@ -108,6 +119,7 @@ const ROUTES = {
     <Transition name="menu-scale">
       <section
         v-if="navOpened"
+        ref="navTarget"
         class="nav-modal fixed top-0 left-0 z-100 w-full md:w-1/2 h-full border-r border-primary/15 origin-[left_center]"
       >
         <section class="w-full h-full md:p-6 bg-dark">
